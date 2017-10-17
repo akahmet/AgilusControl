@@ -1,6 +1,6 @@
 /*
 16.10.2017 
-Ahmet AK @ BAU Robotics Lab
+Ahmet AK @ BAU Robotics Lab For GIBIRTech
 Required Skills: Network Interfaces && TCP/IP && KRL && (NodeJs || Java)
 Test at : Kuka Agilus r900 sixx & KRC 4
 */
