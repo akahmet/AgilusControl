@@ -1,0 +1,13 @@
+$AXIS_ACT
+MYAXIS {AXIS: A1 0, A2 -90, A3 90, A4 5, A5 -1, A6 90}
+$POS_ACT
+MYPOS {FRAME: X 669, Y 2, Z 887, A -90, B 0, C -90}
+MYPOS {FRAME: X 700, Y 2, Z 887, A -90, B 0, C -90}
+MYPOS {FRAME: X 700, Y 30, Z 687, A -90, B 0, C -65}
+
+
+MYPOS {FRAME: X 700, Y 30, Z 687, A -90, B 0, C -45} // write
+Got: MYPOS #read time=2ms  #value={FRAME: X 700, Y 30, Z 687, A -90, B 0, C -45}
+
+MYPOS {FRAME: X 700, Y 2, Z 887, A -90, B 0, C -90}
+Got: MYPOS #read time=3ms  #value={FRAME: X 700, Y 2, Z 887, A -90, B 0, C -90}
