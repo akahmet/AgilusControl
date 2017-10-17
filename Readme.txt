@@ -48,3 +48,9 @@ RUN one of the remotetest(1-2-3) program in KUKA PAD as AUTO PROGRAM
 	remotetest3 = CONTROL CARTESIAN BASED SYSTEM 
 
 Finally, you can run NodeJs Wrapper or Java Client on your computer to access Agilus.
+
+Thank you aauc-mechlab and Massimiliano Fago to create JOpenShowVar and KUKAVARPROXY:
+
+http://sourceforge.net/projects/openshowvar/
+
+https://github.com/aauc-mechlab/JOpenShowVar
