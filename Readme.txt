@@ -2,6 +2,7 @@
 16.10.2017 
 Ahmet AK @ BAU Robotics Lab
 Required Skills: Network Interfaces && TCP/IP && KRL && (NodeJs || Java)
+Test at : Kuka Agilus r900 sixx & KRC 4
 */
 
 Login Agilus: 
