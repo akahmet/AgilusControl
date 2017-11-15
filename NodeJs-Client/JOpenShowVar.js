@@ -28,7 +28,7 @@ function JOpenShowVar(ip, port, event){
 	});
 }
 
-JOpenShowVar.prototype.	 = function (name, data) {
+JOpenShowVar.prototype.writeRequest = function (name, data) {
 	this.client.write(this.packData(name, data, true));
 }
 
@@ -98,9 +98,22 @@ JOpenShowVar.prototype.unPackData = function(data){
 		2 BYTE -> INT DATA LENGTH
 		N BYTE -> STRING DATA VALUE
 	*/
-	//data = new Buffer(data);
-	//buffer.readUIntBE(2, 1);
-	return 'Received: ' + data;
+	data = new Buffer(data);
+	var cmdL = data.readUIntBE(5, 2);
+	var cmd = data.toString('utf8', 7, 7 + cmdL);
+	var dataL = data.readUIntBE(7+cmdL, 2);
+	var val = {};
+	var name = cmd.match(/[A-Z0-9]+:/ig);
+	
+	if (name){
+		name = name[0].replace(':', '');	
+		var values = cmd.match(/([A-Z]|[A-Z][0-9])\s[0-9.-]+/ig);
+		for(var i in values){
+			var sV = values[i].split(' ');
+			val[sV[0]] = sV[1];
+		}
+	}
+	return [cmd, name, val];
 }
 
 JOpenShowVar.prototype.disconnet = function(){
